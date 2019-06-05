@@ -2,8 +2,9 @@ import torch.utils.data
 import torchnet as tnt
 from builtins import object
 import torchvision.transforms as transforms
-from datasets import Dataset
+from . import datasets
 
+Dataset = datasets.Dataset
 
 class PairedData(object):
     def __init__(self, data_loader_A, data_loader_B, max_dataset_size):
